@@ -1,1 +1,100 @@
-Hello world 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <title>VHE Third Grade Fall 2024 -- Ancient Roman Food by Boda Chen</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+
+  <link rel="stylesheet" href="dist/reveal.css" />
+  <link rel="stylesheet" href="dist/theme/night.css" id="theme" />
+  <link rel="stylesheet" href="mystyle.css" />
+
+</head>
+
+<body><div class="reveal"><div class="slides">
+
+
+<section>
+
+  <section>
+    <h3>Ancient Roman Food</h3><br>
+    <h4>Boda Chen</h4>
+
+    <span style="font-size: 26px;">
+      <a href="mailto:chenboda01@gmail.com" style="font-size: 14px;">chenboda01@gmail.com</a> <br>
+          GATE for Third Grade
+    </span><br>
+
+    <p><span style="font-size: 24px;">
+      Virginia Highland Elementary School <br>
+          Atlanta, GA, USA
+    </span></p>
+  </section>
+
+
+
+<section>
+  <h3 class="r-fit-text">Thank you!</h3>
+</section>
+
+</div></div>
+<script src="dist/reveal.js"></script>
+<script src="plugin/math/math.js"></script>
+<script>
+  Reveal.initialize({
+    history: true,
+    transition: "linear",
+
+    mathjax2: {
+      config: "TeX-AMS_HTML-full",
+      TeX: {
+        Macros: {
+          R: "\\mathbb{R}",
+          set: ["\\left\\{#1 \\; ; \\; #2\\right\\}", 2],
+        },
+      },
+    },
+
+    // There are three typesetters available
+    // RevealMath.MathJax2 (default)
+    // RevealMath.MathJax3
+    // RevealMath.KaTeX
+    //
+    // More info at https://revealjs.com/math/
+    plugins: [RevealMath.MathJax2],
+  });
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    // Select all video elements with the class 'SimulationVideo'
+    var videos = document.querySelectorAll('.SimulationVideo');
+
+    // Loop through the NodeList of selected videos
+    videos.forEach((video) => {
+      video.playbackRate = 2.2;
+
+      video.addEventListener('ended', () => {
+        // Seek to the last frame (workaround by subtracting a small value)
+        // Adjust the subtracted value as needed based on testing
+        video.currentTime = Math.max(0, video.duration - 0.01);
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+      // Select all video elements
+      var videos = document.getElementsByTagName('video');
+      // Loop through all video elements and set attributes
+      for (var i = 0; i < videos.length; i++) {
+          videos[i].setAttribute('autoplay', true);
+          videos[i].setAttribute('loop', true);
+          videos[i].setAttribute('muted', true); // Necessary for autoplay in most browsers
+      }
+  });
+</script>
+</body></html>
+
